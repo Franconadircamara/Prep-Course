@@ -20,8 +20,9 @@ function mayoriaDeEdad(edad) {
   //Si tiene 18 años ó más, devolver --> "Allowed"
   //Si es menor, devolver --> "Not allowed"
   if (edad >= 18 ){
-    return "Allowed" ;
-  } else { return  'Not allowed' ; }
+    return "Allowed" 
+  } else { return "Not allowed"
+} 
 }
 
   
@@ -31,13 +32,13 @@ function conection(status) {
   //Cuando el estado es igual a 2, el usuario está "Away"
   //De lo contrario, presumimos que el usuario está "Offline"
   //Devolver el estado de conexión de usuario en cada uno de los casos.
-  if ( status = 1 ) {
+  if ( status === 1 ) {
     return "Online" ;
-  } else if ( status = 2 ) {
+  } else if ( status === 2 ) {
     return "Away" ;
   }
  else { 
-  return "Offline" ; 
+    return "Offline" ; 
 }
 }
 
@@ -58,7 +59,7 @@ function saludo(idioma) {
     return "Hello!" ;
   }
   else {
-       return "Hola!" ;
+    return "Hola!" ;
   }
 }
 
@@ -70,17 +71,21 @@ function colors(color) {
   //En caso que el color recibido sea "orange", devuleve --> "This is orange"
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
-  switch( color ) {
-    case "blue" :
+  switch(color) {
+    case "blue" : {
     return "This is blue" ;
-    case "red" :
-      return "this is red" ;
-      case "green":
-        return "this is green";
-        case "orange":
-          return "this is orange"
-          default :
-          return " color not found"
+    }
+    case "red" : {
+    return "This is red" ;
+    }
+    case "green": {
+    return "This is green"; 
+    }
+    case "orange": {
+    return "This is orange" ;
+    }
+    default : {
+    return " Color not found" ; 
   }
 }
 
@@ -167,11 +172,14 @@ function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
-if (valor === true) ; {
+
+
+
+  if (valor === true) ; {
   return "soy verdadero"
-} {
+} 
   return "soy falso"
-}
+
 
 
 }
@@ -180,11 +188,11 @@ function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
-   let Arraytabladel6  = []
-   for (let i = 0; i < 11; i++) {
+   var Arraytabladel6  = []
+   for (var i = 0 ; i < 11 ; i++) {
     arrayTablaDel6.push(6 * i)
 }
-return arrayTablaDel6
+   return arrayTablaDel6
 }
 
 function tieneTresDigitos(numero){
@@ -193,26 +201,28 @@ function tieneTresDigitos(numero){
   if (numero > 99 && numero < 1000 ) {
     return true
   } 
-  return false 
+    return false 
 }
 
 function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
-  var n = numero
-  var f = 0
-  do {f = f +1 ;
-      n = n +5 }
-  while ( f < 8) ;
-  return n ; 
+var acc = 1 
+var resultado = numero 
+do {
+  resultado = resultado + 5 
+  acc = acc + 1 
+}
+while (acc < 9)
+return resultado 
 }
 
 
 // No modificar nada debajo de esta línea
 // --------------------------------
 
-module.exports = {
+module.exports = 
   obtenerMayor,
   mayoriaDeEdad,
   conection,
@@ -227,5 +237,5 @@ module.exports = {
   esVerdadero,
   tablaDelSeis,
   tieneTresDigitos,
-  doWhile
-};
+  doWhile 
+}
